@@ -46,14 +46,14 @@ cd "$ROM_DIR"
 
 
 # some really necessary patches for IMS to work
-cd frameworks/base && git fetch https://github.com/Corvus-R/android_frameworks_base-staging 11 && git cherry-pick a2c6a3997cdb4598c654b0dea6824286a5a3f727
-cd ../../
-cd frameworks/opt/net/wifi && git fetch https://github.com/PotatoProject/frameworks_opt_net_wifi dumaloo-release && git cherry-pick 88773b8285d7962d0add6a9f55c63fc045beb677
-cd ../../../../
-cd frameworks/opt/net/ims && git fetch "http://gerrit.pixysos.com/PixysOS/frameworks_opt_net_ims" refs/changes/65/4665/1 && git cherry-pick FETCH_HEAD
+cd frameworks/opt/net/ims && git fetch https://github.com/AOSP-12-RMX2020/frameworks_opt_net_ims && git cherry-pick 4f35ccb8bf0362c31bf5f074bcb7070da660412a^..3fe1cb7b6b2673adfce2b9232dfaf81375398efb
+cd ../../../..
+ cd packages/modules/Wifi && git fetch https://github.com/AOSP-12-RMX2020/packages_modules_Wifi && git cherry-pick c6e404695bc451a9667f4893501ef8fe78e1a0b7^..90fc3f6781171dc27fed16b60575f9ea62f02e7a
+cd ../../..
+cd frameworks/opt/telephony && git fetch https://github.com/phhusson/platform_frameworks_opt_telephony android-12.0.0_r26-phh && git cherry-pick 6f116d4cdb716072261ecfe532da527182f6dad6
 
 # Go to initial directory
-cd ../../../../
+cd ../../../
 
 echo -e "${CYAN}"
 echo "<<<<< © RB INTERNATIONAL NETWORK™ >>>>>"
